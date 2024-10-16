@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>W02: task 1</title>
+    </head>
+    <body>
+        
+        <p id='min'></p>
+        <br>
+        <p id='mid'></p>
+        <br>
+        <p id='max'></p>
+        <br>
+
+        <script src='vec3.js'></script>
+        
+        <script>
+        var x = 5, y = 4, z = 8; 
+        var v = new Vec3( x, y, z );
+
+        var min = v.min();
+        var mid = v.mid();
+        var max = v.max();
+
+        document.getElementById("min").innerHTML = `min : ${min}`;
+        document.getElementById('mid').innerHTML = `mid : ${mid}`;
+        document.getElementById('max').innerHTML = `max : ${max}`;
+        </script>
+    </body>
+</html>
