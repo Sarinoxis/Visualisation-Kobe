@@ -1,4 +1,4 @@
-w,col
-100,red
-50,green
-80,blue
+w,col,label
+100,red,rectangle A
+50,green,cars
+80,blue,airpanes
