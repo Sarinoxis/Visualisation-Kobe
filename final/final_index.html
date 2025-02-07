@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Final Assignement</title>
+	<style>
+	 body {
+	     font-family: system-ui;
+	 }
+	 .container {
+	     display: flex;
+	 }
+	 .bar.active {
+	     stroke: #000;
+	 }
+	 #tooltip {
+	     position: absolute;
+	     opacity: 0;
+	     background: #fff;
+	     border: 1px solid #ddd;
+	     font-size: 12px;
+	     font-weight: 600;
+	     padding: 2px 8px;
+	 }
+	 .tooltip-label {
+	     font-weight: 500;
+	     font-size: 11px;
+	     color: #888;
+	 }
+
+	 input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 200px;
+    height: 8px;
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s;
+	}
+
+	#min_age-slider {
+    background: linear-gradient(to right, #cccdcf, #282829);
+	}
+
+	#max_age-slider {
+    background: linear-gradient(to right, #cccdcf, #282829);
+	}
+
+	#min_score-slider {
+    background: linear-gradient(to right, #000000, #000000);
+	}
+
+	</style>
+    </head>
+    <body>
+	<h2>Mall Customers Dataset</h2>
+	<div id="tooltip"></div>
+	<div>
+		<input type="range" min="15" value="15" max="75" id="min_age-slider">
+		<label for="min_age-slider">Min age  :    <span id="min_age-value">15</span></label>
+	</div>
+	<div>
+		<input type="range" min="15" value="75" max="75" id="max_age-slider">
+		<label for="max_age-slider">Max age  :    <span id="max_age-value">75</span></label>
+	</div>
+	<div>
+		<input type="range" min="0" value="0" max="100" id="min_score-slider">
+		<label for="max_age-slider">Min Spending Score  :    <span id="min_score-value">0</span></label>
+	</div>
+	<div class="container">
+	    <div><svg id="drawing_region_scatterplot"></svg></div>
+	    <div><svg id="drawing_region_barchart"></svg></div>
+	</div>
+	<script src="https://d3js.org/d3.v6.min.js"></script>
+	<script src="scatter_plot.js"></script>
+	<script src="pie_chart.js"></script>
+	<script src="main.js"></script>
+    </body>
+</html>
